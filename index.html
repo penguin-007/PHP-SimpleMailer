@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title><title>Somple Mailer</title></title>
+  <meta name="robots" content="noindex">
+  <meta charset="utf-8">
+</head>
+<body>
+
+	<form class="fn_simpleMailer" >
+
+		<input type="text" name="Имя"  autocomplete="off" placeholder="Имя">
+		<br>
+		<br>
+		<input type="text" name="Фамилия"  autocomplete="off" placeholder="Фамилия">
+		<br>
+		<br>
+		<input type="file" name="file">
+		<br>
+		<br>
+
+		<!-- hidden input -->
+		<input type="hidden" name="form_subject"  value="Тема">
+	  <input type="hidden" name="form_title"    value="Заголовок">
+	  <input type="hidden" name="form_redirect" value="spasibo-za-obrashhenie/">
+	  <!-- hidden input -->
+
+		<input type="submit">
+
+	</form>
+
+	<!--js -->
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="simpleMailer/simpleMailer.js"></script>
+	<!-- end js -->
+
+</body>
+</html>
