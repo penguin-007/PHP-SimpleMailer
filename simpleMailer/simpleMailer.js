@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   // wps_form
   $("body").on( "submit", ".fn_simpleMailer", function(){
     var form       = $(this);
@@ -20,11 +19,10 @@ $(document).ready(function(){
         form.addClass('sending');
         btn_submit.addClass('sending');
       },
-      success: function(data) {
+      success: function(data){
         // get data from json
         var json = JSON.parse(data);
-        // if redirect
-        console.log( json.location );
+        // if redirect 
         if ( json.location ) {
           window.location.replace(json.location+"/");
         } else {
@@ -50,5 +48,4 @@ $(document).ready(function(){
     });
     return false;
   });
-  
 });
