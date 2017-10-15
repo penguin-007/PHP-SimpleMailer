@@ -1,9 +1,12 @@
 $(document).ready(function(){
-  // wps_form
+  var simpleMailer = {};
+  // simpleMailer
   $("body").on( "submit", ".fn_simpleMailer", function(){
     var form       = $(this);
     var data       = new FormData(form[0]);
     var btn_submit = form.find('[type=submit]');
+    // simpleMailer data
+    var callback   = form.data('callback');
 
     $.ajax({
       // server script to process the upload
@@ -40,6 +43,9 @@ $(document).ready(function(){
           }, 2500);
           // message
           console.log("simpleMailer success");
+        }
+        if ( typeof simpleMailer[callback] !== "undefined" ){
+          simpleMailer[callback]();
         }
       },
       error: function(data){

@@ -99,7 +99,7 @@
   $form_redirect = $_POST["form_redirect"];
   $message       = $mail->render_message( $_POST );
 
-  // send
+  // send 
   $result = $mail->send_email(array(
     "to"            => $to,
     "from"          => $project_name,
