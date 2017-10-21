@@ -41,6 +41,10 @@
 
 </form>
 ```
+**form_subject**  - Тема письма (будет показана в почтовом клиенте)
+**form_title**    - Заголовок (в шапке письма)
+**form_redirect** - Редирект на другую страницу после отправки
+**form_template** - Шаблон письма
 
 
 Callback для формы:
@@ -49,6 +53,6 @@ Callback для формы:
 // для simpleMailer
 var simpleMailer = {};
 simpleMailer.test = function(){
-	alert("Simple Mailer Callback!");
+  alert("Simple Mailer Callback!");
 };
 ```

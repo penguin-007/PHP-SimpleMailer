@@ -18,6 +18,7 @@ $(document).ready(function(){
       // Form data
       data: data,
       // Tell jQuery not to process data or worry about content-type
+      dataType: "json",
       cache: false,
       contentType: false,
       processData: false,
@@ -26,11 +27,9 @@ $(document).ready(function(){
         btn_submit.addClass('sending');
       },
       success: function(data){
-        // get data from json
-        var json = JSON.parse(data);
         // if redirect 
-        if ( json.location ) {
-          window.location.replace(json.location+"/");
+        if ( data.location ) {
+          window.location.replace(data.location+"/");
         } else {
           form.trigger('reset');
           // clear styles

@@ -8,131 +8,35 @@
 <body>
 
 
+  <form class="fn_simpleMailer" data-callback="test"  >
 
-<form class="fn_simpleMailer" data-callback="test" >
-  <h1>Register for Miss Bakers Space Cadets</h1>
-  <fieldset> 
-    <legend>Personal details</legend> 
-    <div> 
-        <label>First Name
-        <input id="given-name" name="given-name" type="text" placeholder="First name only"  autofocus> 
-    </label>
-    </div>
-    <div> 
-        <label>Last Name
-        <input id="family-name" name="family-name" type="text" placeholder="Last name only"  autofocus> 
-    </label>
-    </div>
-    <div> 
-      <label>Date of Birth
-        <input id="dob" name="dob" type="date" >
-    </label>
-    </div> 
-    <div> 
-        <label>Email 
-        <input id="email" name="email" type="email" placeholder="example@domain.com" >
-    </label> 
-    </div> 
-    <div> 
-        <label>URL 
-        <input id="url" name="url" type="url" placeholder="http://mysite.com">
-    </label> 
-    </div>    
-    <div> 
-        <label>Telephone 
-        <input id="phone" name="phone" type="tel" placeholder="Eg. +447000 000000" >
-    </label> 
-    </div> 
-  <div>
-    <label>Shoesize
-    <input id="shoes" name="shoes" type="number" min="5" max="18" step="0.5" value="9">
-    </label>
-  </div>
-  <div>
-    <label>Flying Skill level (1 low - 100 high)
-    <input id="skill" name="skill" type="range" min="1" max="100" value="0">
-    <output name="output" onforminput="value=a.value">0</output>
-    </label>
-  </div>
-  </fieldset>
-  <br>
-  <fieldset> 
-    <legend>Billing address</legend> 
-    <div> 
-        <label>Address 
-        <textarea id="address" name="address" rows=5 ></textarea>
-    </label> 
-    </div> 
-    <div> 
-        <label>Post code 
-        <input id="postCode" name="postCode" type="text" >
-    </label> 
-    </div> 
-    <div> 
-        <label>Country 
-        <input id="country" name="country" list="country-names" type="text" > 
-        <datalist id="country-names"> 
-          <option label="England" value="England"></option> 
-          <option label="Northern Ireland" value="Northern Ireland"></option> 
-          <option label="Ireland" value="Ireland"></option> 
-          <option label="Scotland" value="Scotland"></option> 
-          <option label="Wales" value="Wales"></option> 
-        </datalist>
-    </label> 
-    </div> 
-  </fieldset> 
-  <br>
-  <fieldset> 
-    <legend>Card details</legend> 
-    <fieldset> 
-      <legend>Card type</legend> 
-      <div class="card-type"> 
-          <input id="visa" name="cardtype" type="radio"> 
-          <label for="visa">VISA</label> 
-          <input id="mastercard" name="cardtype" type="radio">
-          <label for="mastercard">Mastercard</label> 
-          <input id="amex" name="cardtype" type="radio"> 
-          <label for="amex">AMEX</label>
-      </div> 
-    </fieldset>
-    <div> 
-        <label>Name
-        <input id="cardName" name="cardName" type="text" placeholder="Name as it appears on your card" >
-    </label>  
-    </div>
-    <div> 
-        <label>Card number 
-        <input id="cardNo" name="cardNo" type="number"  title="The sixteen digit number across the middle of your card."> 
-    </label>
-    </div>
-    <div> 
-        <label>Security code 
-        <input id="security" name="security" type="number"  pattern="[0-9]{3}" title="The last three digits on the back of your card.">
-    </label> 
-    </div>
-    <div> 
-        <label>Expiry Date 
-        <input id="expiry" name="expiry" type="month">
-    </label>
-    </div>
-  </fieldset>
+    <input type="text" name="fio" required autocomplete="off">
+    <br>
+    <input type="tel"  name="phone" autocomplete="off">
+    <br>
+    <br>
 
+
+    <!-- или -->
+    <input type="text" name="ФИО" autocomplete="off">
+    <br>
+    <input type="tel"  name="Телефон" autocomplete="off">
+    <br>
+    <br>
+
+    <!-- если надо поле с файлом (пока работает только с одним) -->
+    <input type="file" name="file">
+    <br>
+    <br>
 
     <!-- hidden input -->
     <input type="hidden" name="form_subject"  value="Тема">
     <input type="hidden" name="form_title"    value="Заголовок">
-    <!--
-    <input type="hidden" name="form_redirect" value="spasibo-za-obrashhenie">
-    -->
     <!-- hidden input -->
 
-  <br>
-  <fieldset> 
-    <div> 
-      <button type=submit>Send</button> 
-    </div> 
-  </fieldset> 
-</form> 
+    <input type="submit" value="Отправить">
+
+  </form>
 
 
 
@@ -140,6 +44,15 @@
   <script src="jquery-3.2.1.min.js"></script>
   <script src="simpleMailer/simpleMailer.js"></script>
   <!-- end js -->
+
+
+  <script>
+    // для simpleMailer
+    var simpleMailer = {};
+    simpleMailer.test = function(){
+      alert("Simple Mailer Callback!");
+    };
+  </script>
 
 </body>
 </html>
