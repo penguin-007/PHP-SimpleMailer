@@ -1,5 +1,8 @@
-$(document).ready(function(){
+if ( typeof(simpleMailer) === "undefined" ||  typeof(simpleMailer) === "null" ){
   var simpleMailer = {};
+}
+$(document).ready(function(){
+  
   // simpleMailer
   $("body").on( "submit", ".fn_simpleMailer", function(){
     var form       = $(this);
@@ -54,4 +57,5 @@ $(document).ready(function(){
     });
     return false;
   });
+
 });
