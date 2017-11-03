@@ -6,9 +6,6 @@
 ------
 
 ```
-<!-- css -->
-<link rel="stylesheet" href="libs/SimpleModal/simple_modal.css">
-
 <!-- js -->
 <script src="simpleMailer/simpleMailer.js"></script>
 
