@@ -94,7 +94,7 @@
   $mail = new simpleMailer();
 
   // general
-  $to            = "mr.laznevoy@gmail.com";
+  $to            = "YOUR_EMAIL@EMAIL.EMAIL";
   $project_name  = "Clock.ua";
   $sender        = "test@showtest.zzz.com.ua";
 
